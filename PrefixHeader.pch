@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  AudioPlayRecordDemo
+//
+//  Created by zx_05 on 16/3/8.
+//  Copyright © 2016年 flybear_tech. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
+#import "JKDBModel.h"
+#import "Utility.h"
+#import "FMDB.h"
+
+#endif
+
+#define kWidth  [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+
+#define RGBColor(r,g,b,a)       ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DLog(fmt, ...) nil
+#endif
+
+
+#define SOUNDPLAYFINISH @"soundPlayFinish"
+
+#endif /* PrefixHeader_pch */
